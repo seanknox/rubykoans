@@ -23,7 +23,7 @@ class Proxy
   # WRITE CODE HERE
   def method_missing(method_name, *args, &block)
     @messages << method_name
-    puts "Sending :#{method_name} with args <#{args}> to #{@object}"
+    # puts "Sending :#{method_name} with args <#{args}> to #{@object}"
     @object.send(method_name, *args, &block) 
   end
 
